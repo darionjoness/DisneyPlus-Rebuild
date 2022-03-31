@@ -18,7 +18,7 @@ function arrowBounce(){
 }
 
 
-setInterval(arrowBounce, 800)
+setInterval(arrowBounce, 1200)
 
 
 
