@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+	--btn-blue: rgba(0,99,229);
+	--bg-color: #040714;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: var(--bg-color);
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	color: #fff;
+}
+
+img{
+	width: 100%;
+}
+
+.navbar{
+	background: url('images/homeBg.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	height: 70px;
+	height: 100vh;
+}
+
+.navbarItems{
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 75px;
+	transition: all 0.3s ease-in;
+	width: 100%;
+	top: 0;
+}
+
+.navbarItems.active{
+	background-color: var(--bg-color);
+}
+
+.navbarItems img{
+	height: 70px;
+	width: 90px;
+	opacity: 0;
+	transition: all 0.3s ease-in;
+}
+
+.navbarItems.active img{
+	opacity: 1;
+}
+
+.navbarItems .navButtons .signUp{
+	color: #fff;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	border-radius: 5px;
+	background-color: var(--btn-blue);
+	padding: 15px 25px;
+	margin: 0 15px;
+	border: none;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: background-color 0.1s ease-in;
+	opacity: 0;
+}
+
+.navbarItems.active .signUp{
+	opacity: 1;
+}
+
+.navbarItems .navButtons .signUp:hover{
+	background-color: #126ee6;
+}
+
+.navbarItems .navButtons .logIn{
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	background-color: rgba(0, 0, 0, 0.8);
+	border: none;
+	padding: 15px 20px;
+	border: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	transition:all 0.1s ease-in ;
+}
+
+.navbarItems .navButtons .logIn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+.container{
+	padding: 0 50px;
+}
