@@ -1,15 +1,25 @@
 const navbarItems = document.querySelector('.navbarItems');
+const downArrow = document.querySelector('.downArrow a');
 
-navbarItems.classList.remove('active')
 window.addEventListener('scroll', fixNav);
 
+
 function fixNav(){
-	if(window.scrollY > navbarItems.offsetHeight + 600){
+	// Add class when you scroll to a certain point
+	if(window.scrollY > navbarItems.offsetHeight + 650){
 		navbarItems.classList.add('active');
 	} else{
 		navbarItems.classList.remove('active')
 	}
 }
+
+function arrowBounce(){
+	downArrow.classList.toggle('move')
+}
+
+
+setInterval(arrowBounce, 800)
+
 
 
 

@@ -21,13 +21,26 @@ img{
 	width: 100%;
 }
 
+/* NAVBAR */
+
 .navbar{
 	background: url('images/homeBg.jpeg');
 	background-size: cover;
+	background-position: 75% 25%;
 	background-repeat: no-repeat;
 	z-index: 1;
 	height: 70px;
 	height: 100vh;
+}
+
+.navbar::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
 }
 
 .navbarItems{
@@ -39,10 +52,19 @@ img{
 	transition: all 0.3s ease-in;
 	width: 100%;
 	top: 0;
+	z-index: 5;
 }
 
 .navbarItems.active{
 	background-color: var(--bg-color);
+}
+
+.navbarItems a{
+	pointer-events: none;
+}
+
+.navbarItems.active a{
+	pointer-events: auto;
 }
 
 .navbarItems img{
@@ -69,10 +91,12 @@ img{
 	cursor: pointer;
 	transition: background-color 0.1s ease-in;
 	opacity: 0;
+	pointer-events: none;
 }
 
 .navbarItems.active .signUp{
 	opacity: 1;
+	pointer-events: auto;
 }
 
 .navbarItems .navButtons .signUp:hover{
@@ -97,14 +121,102 @@ img{
 	color: #000;
 }
 
+/* SHOWCASE */
+
+.showcase{
+	z-index: 2;
+	position: relative;
+	max-width: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 40px;
+	text-align: center;
+}
+
+.showcaseItems{
+	text-align: center;
+}
+
+.showcaseItems .showcaseBtn{
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: var(--btn-blue);
+	color: #fff;
+	border: none;
+	width: 100%;
+	padding: 25px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 25px 0;
+}
+
+.showcaseItems .showcaseBtn:hover{
+	background-color: #126ee6;
+}
+
+.showcaseItems .showcaseBtn + p{
+	font-size: 0.8rem;
+	margin: 10px 0 20px;
+	color: lightgray;
+}
+
+.showcaseItems .showcaseBtn + p a{
+	color: #fff;
+}
+
+.showcaseItems .showcaseBtn + p + img{
+	margin: 10px 0 20px;
+}
+
+.showcaseItems .showcaseBtn + p + img + a{
+	color: #fff;
+	font-size: 1.1rem;
+}
+
+.downArrow a{
+	color: lightgray;
+	position: absolute;
+	z-index: 2;
+	bottom: 40px;
+	left: 50%;
+	font-size: 1.75rem;
+}
+
+.downArrow a.move{
+	animation: bounce 1.3s linear;
+}
 
 
 
 
-
-
+@keyframes bounce{
+	20%,50%,80%, to{
+		transform: translateY(0);
+	}
+	40%{
+		transform: translateY(-12px);
+	}
+	70%{
+		transform: translateY(-8px);
+	}
+	90%{
+		transform: translateY(-2px);
+	}
+}
 
 
 .container{
 	padding: 0 50px;
+}
+
+
+@media(max-width: 668px){
+	.navbarItems{
+		padding: 0 20px;
+	}
+
 }
