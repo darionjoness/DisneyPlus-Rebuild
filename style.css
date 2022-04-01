@@ -245,9 +245,53 @@ img{
 	font-size: 1.1rem;
 }
 
+/* DISNEY BUNDLE */
+
+#disneyBundle{
+	padding: 40px 20px;
+
+}
+
+.disneyBundleItems{
+	border: 1px solid #fff;
+	padding: 0 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 350px;
+}
+
+.disneyBundleItems .disneyBundleImg{
+	margin-top: -20px;
+}
+
+.disneyBundleItems .disneyBundleText p{
+	color: darkgray;
+	line-height: 1.5;
+	margin: 15px 0;
+}
+
+.disneyBundleItems .disneyBundleText p a{
+	color: lightgray;
+}
+
+.disneyBundleItems .disneyBundleText button{
+	background-color: var(--btn-blue);
+	color: #fff;
+	font-size: 1.1rem;
+	padding: 15px 80px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+.disneyBundleItems .disneyBundleText button:hover{
+	background-color: #126ee6;
+}
 
 
 
+/* KEYFRAMES */
 @keyframes bounce{
 	20%,80%, to{
 		transform: translateY(0);
@@ -303,6 +347,23 @@ img{
 
 	.underShowcaseList h1{
 		text-align: center;
+	}
+
+	.disneyBundleItems{
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.disneyBundleItems .disneyBundleText p{
+		text-align: center;
+	}
+
+	.disneyBundleBtn{
+		text-align: center;
+	}
+
+	.disneyBundleItems .disneyBundleImg{
+		margin: 0;
+		margin-top: 15px;
 	}
 
 }
