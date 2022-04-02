@@ -4,6 +4,7 @@ const faqItems = document.querySelectorAll('.faqItem h3');
 
 // add class to navbar when certain point on screen is reached
 window.addEventListener('scroll', fixNav);
+
 // Faq buttons event listener
 faqItems.forEach((item) => {
 	item.addEventListener('click', () => {
@@ -20,6 +21,7 @@ function fixNav(){
 		navbarItems.classList.remove('active')
 	}
 }
+
 // Toggle the move class to the downArrow
 function arrowBounce(){
 	downArrow.classList.toggle('move')

@@ -453,8 +453,43 @@ img{
 
 
 /* FOOTER  */
+.footer{
+	margin: 20px 0;
+	text-align: center;
+	font-size: 0.7rem;
+	color: darkgray;
+}
 
+.footerContainer img{
+	height: 75px;
+	width:75px;
+}
 
+.footerContainer p{
+	margin: 10px;
+}
+
+.upperText{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.upperText p{
+	margin: 10px;
+}
+
+.middleText{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.middleText p{
+	margin: 10px;
+}
 
 
 
