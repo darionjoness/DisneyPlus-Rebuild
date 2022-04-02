@@ -1,8 +1,15 @@
 const navbarItems = document.querySelector('.navbarItems');
 const downArrow = document.querySelector('.downArrow a');
+const faqItems = document.querySelectorAll('.faqItem h3');
 
 // add class to navbar when certain point on screen is reached
 window.addEventListener('scroll', fixNav);
+// Faq buttons event listener
+faqItems.forEach((item) => {
+	item.addEventListener('click', () => {
+		item.parentNode.parentNode.classList.toggle('active')
+	})
+})
 
 
 function fixNav(){
